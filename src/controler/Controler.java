@@ -36,14 +36,46 @@ public class Controler {
         });
 
         botaoMenos.addActionListener(e -> {
+        	if (operacao.isEmpty()) {
+        		operacao = "0 - ";
+        		frame.atualizarLabel(operacao);
+        	}else {
+        		if(primeiroValor) {
+        			operacao += " - ";
+        			frame.atualizarLabel(operacao);
+        			primeiroValor=false;
+        		}
+        	}
 
         });
 
         botaoMul.addActionListener(e -> {
+        	if (operacao.isEmpty()) {
+        		operacao = "0 * ";
+        		frame.atualizarLabel(operacao);
+        	}else {
+        		if(primeiroValor) {
+        			operacao += " * ";
+        			frame.atualizarLabel(operacao);
+        			primeiroValor=false;
+        		}
+        	}
+
 
         });
 
         botaoDiv.addActionListener(e -> {
+        	if (operacao.isEmpty()) {
+        		operacao = "0 / ";
+        		frame.atualizarLabel(operacao);
+        	}else {
+        		if(primeiroValor) {
+        			operacao += " / ";
+        			frame.atualizarLabel(operacao);
+        			primeiroValor=false;
+        		}
+        	}
+
 
         });
 
